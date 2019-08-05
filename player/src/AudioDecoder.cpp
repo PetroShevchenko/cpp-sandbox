@@ -4,12 +4,12 @@
 
 #include <cstring>
 
-using namespace std;
+//using namespace std;
 
 void AudioDecoder::decode()
 {
 	
-	string fn = get_fn();
+	std::string fn = get_fn();
 
 	char cmd_str[64];
 

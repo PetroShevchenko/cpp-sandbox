@@ -2,8 +2,6 @@
 #define DECODER_H
 #include <string>
 #include <iostream>
-using namespace std;
-
 
 
 class Decoder {
@@ -14,19 +12,16 @@ public:
 
 Decoder(std::string const & fn): fname(fn)
 {
-	//this->fn = fn; 
 }
 
-const string get_fn() const
+const std::string get_fn() const
 {
 	return fname;
 } 
 
-virtual ~Decoder()
-{
-}
+virtual ~Decoder(){}
 
-virtual void decode();
+virtual void decode() = 0;
 
 };
 
