@@ -15,14 +15,17 @@ public:
 Decoder(std::string const & fn): fname(fn)
 {
 	//this->fn = fn; 
-};
+}
 
 const string get_fn() const
 {
 	return fname;
 } 
 
-virtual ~Decoder(){};
+virtual ~Decoder()
+{
+}
+
 virtual void decode();
 
 };

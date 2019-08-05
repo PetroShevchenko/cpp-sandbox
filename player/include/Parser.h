@@ -1,3 +1,6 @@
+#ifndef PARSER_H
+#define PARSER_H
+
 #include <iostream>
 #include <cstring>
 #include <string>
@@ -31,3 +34,5 @@ class Parser {
 	void set_file_name(string &);
 	file_format_t parse();
 };
+
+#endif

@@ -1,7 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Parser.h"
-
+#include "Decoder.h"
+#include "Parser.h"
 
 
 class Player {
@@ -17,7 +18,7 @@ Player()
 {	
 }
 
-void play (const std :: string & fileName);
+void play (std :: string & fileName);
 
 };
 

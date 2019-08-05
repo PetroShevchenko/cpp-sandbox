@@ -1,5 +1,6 @@
 #include "Player.h"
-
+#include "VideoDecoder.h"
+#include "AudioDecoder.h"
 /*
 class Player {
 
@@ -30,25 +31,32 @@ typedef enum file_format_e {
 
 
 
-void Player::play (const std :: string & fileName)
+void Player::play (std :: string & fileName)
 {
 	file_format_t ff;
 
 	parser.set_file_name(fileName);
 	
-	ff = parse();
+	ff = parser.parse();
+	VideoDecoder VD(fileName);
+	AudioDecoder AD(fileName);
 
 	switch (ff)
 	{
 
 		case VIDEO_FORMAT:
 
-		pDecoder = new VideoDecoder(fileName);
+		//VideoDecoder VD(fileName);
+		pDecoder = &VD;
+		
 		break;
 
 
 		case AUDIO_FORMAT:
-		pDecoder = new AudioDecoder(fileName);
+
+		//AudioDecoder AD(fileName);
+		pDecoder = &AD;
+
 		break;
 
 		case UNKNOWN_FORMAT:
@@ -56,7 +64,7 @@ void Player::play (const std :: string & fileName)
 		return;
 	}
 
-	pDecoder.decode();
+	pDecoder->decode();
 
 
 	delete pDecoder;

@@ -9,7 +9,7 @@ AudioDecoder(std::string const & fn): Decoder(fn) {};
 ~AudioDecoder(){};
 void decode();
 
-}
+};
 
 
 

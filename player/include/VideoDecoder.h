@@ -5,11 +5,12 @@
 class VideoDecoder : public Decoder {
 
 public:
-VideoDecoder(std:string const & fn): Decoder(fn) {};
+VideoDecoder(std::string const & fn): Decoder(fn) {};
+
 ~VideoDecoder(){};
 void decode();
 
-}
+};
 
 
 
